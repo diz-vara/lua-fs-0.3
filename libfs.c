@@ -47,11 +47,16 @@
 #include <string.h>
 #include <time.h>
 
-#define	__USE_BSD 1
-#include <sys/stat.h>
-#include <unistd.h>
-#include <dirent.h>
-#include <fcntl.h>
+#ifdef _WIN32
+# include <windows.h>
+#else
+# define __USE_BSD 1
+# include <sys/stat.h>
+# include <unistd.h>
+# include <dirent.h>
+# include <fcntl.h>
+#endif
+
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <utime.h>
