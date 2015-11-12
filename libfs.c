@@ -55,12 +55,12 @@
 # include <unistd.h>
 # include <dirent.h>
 # include <fcntl.h>
+# include <utime.h>
+# include <pwd.h>
 #endif
 
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <utime.h>
-#include <pwd.h>
 
 #define MYNAME		"libfs"
 
